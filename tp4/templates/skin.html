@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+
+  <title>Data Hewan Ternak</title>
+
+  <style>
+    td{
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Data Hewan Ternak</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+</nav>
+
+<br />
+<br />
+
+
+<div style="margin-left: 5%">
+  <form action="index.php" method="POST">
+    <div class="form-row">
+      <div class="form-group col-md-2">
+        <label for="kode">Kode Hewan</label>
+        <input type="text" class="form-control" name="kode" required />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group col-md-6">
+        <label for="nama">Hewan</label>
+        <div class="col-sm-10">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="nama" id="nama1" value="Sapi" />
+            <label class="form-check-label" for="nama1">Sapi</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="nama" id="nama2" value="Domba" />
+            <label class="form-check-label" for="nama2">Domba</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="nama" id="nama3" value="Ayam" />
+            <label class="form-check-label" for="nama3">Ayam</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group col-md-6">
+        <label for="jk">Kelamin Hewan</label>
+        <div class="col-sm-10">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="jk" id="jk1" value="Jantan" />
+            <label class="form-check-label" for="jk1">Jantan</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="jk" id="jk2" value="Betina" />
+            <label class="form-check-label" for="jk2">Betina</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-2">
+        <label for="berat">Berat</label>
+        <input class="form-control" name="berat" rows="3" required />
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-2">
+        <label for="kategori">Kategori</label>
+        <select class="form-control" name="kategori" id="kategori">
+          <option value="Anak">Anak</option>
+          <option value="Dewasa">Dewasa</option>
+          <option value="Tua">Tua</option>
+        </select>
+      </div>
+    </div>
+
+    <button type="submit" name="add" class="btn btn-primary">Add</button>
+  </form>
+
+  <br>
+
+  <!-- Tabel 1 - Task -->
+  <div style="display: inline-block; ">
+    <h3>Data Hewan Ternak</h3>
+    <!-- TABEL1 -->
+    <table align="left" border="1" style="text-align: center;">
+      <tr>
+        <td>No</td>
+        <td>Kode Hewan</td>
+        <td>Nama</td>
+        <td>Kelamin Hewan</td>
+        <td>Kategori</td>
+        <td>Berat</td>
+        <td>Status</td>
+        <td>Aksi</td>
+      </tr>
+      <tr>
+        <!-- DATA YG AKAN DIGANTI -->
+        DATA_TABEL
+      </tr>
+    </table>
+  </div>
+
+
+
+</div>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+</script>
+</body>
+
+</html>
