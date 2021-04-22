@@ -24,14 +24,12 @@ if(isset($_POST['add'])){
 
 	$otask->insertTask($nama_hewan, $kodehewan, $jk_hewan, $kategori_hewan, $berat_hewan, $status_hewan);
 
-	// $result = mysqli_query($otask, $otask->insertTask($iname, $idetails, $ideadline, $isubject, $ipriority, $istatus));
-
 
 
 	header('Location: index.php');
 }
 
-// delete data
+// delete data hewan
 if(isset($_GET['kodehewan_hapus'])){
 	$kodehewan = $_GET['kodehewan_hapus'];
 	$otask->delete($kodehewan);
@@ -39,7 +37,7 @@ if(isset($_GET['kodehewan_hapus'])){
         header('Location: index.php');
 }
 
-// update status data mahasiswa
+// update status data hewan
 if(isset($_GET['kodehewan_status'])){
 	$kodehewan = $_GET['kodehewan_status'];
 	$otask->update($kodehewan);
@@ -55,7 +53,7 @@ $data = null;
 $no = 1;
 
 while (list($kodehewan, $nama, $jk, $kategori, $berat, $status) = $otask->getResult()) {
-	// Tampilan jika status nya sudah lulus
+	// Tampilan jika status nya sudah terjual
 	if($status == "Terjual"){
 		$data .= "<tr>
 		<td>" . $no . "</td>
@@ -72,7 +70,7 @@ while (list($kodehewan, $nama, $jk, $kategori, $berat, $status) = $otask->getRes
 		$no++;
 	}
 	
-	// Tampilan jika status nya belum sehat
+	// Tampilan jika status nya belum terjual
 	else{
 		$data .= "<tr>
 		<td>" . $no . "</td>
