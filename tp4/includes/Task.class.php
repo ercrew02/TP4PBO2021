@@ -28,7 +28,7 @@ class Task extends DB{
 
 	// hapus data dari data_hewan
 	function delete($data){
-		// query delete dari nim yang dipilih
+		// query delete dari kode yang dipilih
         $sql = "DELETE FROM data_hewan WHERE kodehewan=$data";
 
 		return $this->execute($sql);
@@ -36,7 +36,7 @@ class Task extends DB{
 
 	// update status hewan
 	function update($data){
-		// query update statusnya menjadi sudah lulus
+		// query update statusnya menjadi terjual
 		$sql = "UPDATE data_hewan SET status_hewan='Terjual' WHERE kodehewan=$data";
 
 		return $this->execute($sql);
